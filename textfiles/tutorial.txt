@@ -1,0 +1,20 @@
+A chord is a series of notes that are played together.
+When certain chords are combined, they make decent music.
+A sequence of chords is called a chord progression.
+This program can generate a chord progression and output it in MIDI and MP3 format.
+
+1. Select a mood (happy or sad). Happy means a major progression, sad means a minor one.
+
+2. Select the first chord of the progression, if you want, you can choose any.
+
+3. Click on the "generate chord progression" button.
+
+4. You have generated a chord progression!
+
+Output:
+1. Select the BPM of the chord progression.
+2. Select how many times the progression should be repeated in your file.
+3. If you want to output in MP3 format, select the suggested synthesizers or your own.
+4. Also, you can add a bass part or drums (rock or electronic)
+5. You can output in MIDI and MP3 format.
+When outputting to MP3, output to WAV is possible. Wait until WAV disappears and MP3 appears.
