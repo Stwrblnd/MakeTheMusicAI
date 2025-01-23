@@ -1,7 +1,10 @@
 # MakeTheMusicAI
 
-Hello! This is Yerassyl Abeuov’s project for Infomatrix Asia 2025 in AI programming (“Using artificial intelligence in music”)
+IMPORTANT NOTE!!!
+https://drive.google.com/file/d/1eIkRQ--aeGWF21L2gHVwiBssoj29Ybdo/view?usp=drive_link
+Sorry. You have to download the file from the link above and add it to the “sounds” folder if you want the program to work properly. The file is too big for GitHub. It adds piano synthesizer.
 
+Hello! This is Yerassyl Abeuov’s project for Infomatrix Asia 2025 in AI programming (“Using artificial intelligence in music”.
 
 It is a computer program (written in Python) whose built-in neural network is capable of generating melodies, namely a chord sequence depending on the mood specified by the user and the first chord of the sequence. 
 A user can add drums (rock or electronic) or bass line to the melody, change synthesizer, export the melody in MP3 or MIDI.
