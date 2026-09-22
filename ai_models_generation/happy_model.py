@@ -17,17 +17,14 @@ def normalize_chord_name(chord_name):
         'A#': 'Bb', 'C#': 'Db', 'D#': 'Eb', 'F#': 'Gb', 'G#': 'Ab',
         'A#m': 'Bbm', 'C#m': 'Dbm', 'D#m': 'Ebm', 'F#m': 'Gbm', 'G#m': 'Abm'
     }
-    # Нормализация аккорда
     return normalization_map.get(chord_name, chord_name)
 
 def preprocess_data(chords):
-    # Нормализуем все аккорды в прогрессии перед созданием словаря
     chords_normalized = [[normalize_chord_name(chord) for chord in progression] for progression in chords]
     unique_chords = set(chord for progression in chords_normalized for chord in progression)
     chord_to_int = {chord: i for i, chord in enumerate(unique_chords)}
     int_to_chord = {i: chord for chord, i in chord_to_int.items()}
-    
-    # После нормализации продолжаем с созданием последовательностей
+
     sequences = []
     for progression in chords_normalized:
         sequence = [chord_to_int[chord] for chord in progression]
@@ -46,9 +43,9 @@ def preprocess_data(chords):
 
 def create_model(num_unique_chords):
     model = Sequential([
-        Embedding(input_dim=num_unique_chords, output_dim=100, input_length=3),  # Увеличенный output_dim
+        Embedding(input_dim=num_unique_chords, output_dim=100, input_length=3),
         LSTM(100, return_sequences=True),
-        Dropout(0.2),  # Добавлен слой Dropout
+        Dropout(0.2), 
         LSTM(100),
         Dense(num_unique_chords, activation='softmax')
     ])
